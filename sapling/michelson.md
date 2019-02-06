@@ -49,7 +49,7 @@ Attempts to create a note and insert it inside the dazzle.
 ```
 UNSHIELD
 
-:: nat : root_hash : proof : dazzle : 'S -> option dazzle : 'S
+:: nat : bytes @target : root_hash : proof : dazzle : 'S -> option dazzle : 'S
 ```
 
 attempts to spend a note present in the merkle tree with the hash root_hash
@@ -72,7 +72,7 @@ SHIELD
 
 UNSHIELD
 
-:: unshield_op : dazzle : 'S -> nat : dazzle : 'S
+:: nat : bytes @target : unshield_op : dazzle : 'S -> dazzle : 'S
 
 SHIELDED_TX
 
