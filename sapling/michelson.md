@@ -59,3 +59,22 @@ attempts to spend a note present in the merkle tree with the hash root_hash
 ```
 :: root_hash : list (pair (note, proof)) : list (pair (note, proof)) : proof : dazzle : 'S  ->  option dazzle : 'S
 ```
+
+## Even less granular
+
+We could also ignore notes, proofs etc and further encapsulate with
+
+
+```
+SHIELD
+
+:: nat : shield_op : dazzle : 'S -> option dazzle
+
+UNSHIELD
+
+:: unshield_op : dazzle : 'S -> nat : dazzle : 'S
+
+SHIELDED_TX
+
+:: shielded_tx_op : dazzle : 'S -> dazzle : 'S
+```
