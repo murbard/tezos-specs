@@ -7,7 +7,8 @@ This is a low granularity integration of Sapling in Michelson
 We introduce the datatype `dazzle`. Under the hood, a dazzle represents
 
 1. a nullifier set
-2. a dequeue of merkle trees (sharing nodes)
+2. a dequeue of merkle trees (sharing nodes) (can simply be implemented as a map from indices
+to merkle trees)
 3. a map between root hashes and the corresponding merkle tree in the dequeue
 
 Dazzles are constructed using the opcode
@@ -22,6 +23,14 @@ MAKE_DAZZLE
 Which creates a dazzle and sets the maximum length of the dequeue.
 
 Dazzles are just handles. Much like bigmaps, they are not fully deserialized when accessed.
+
+## Types
+
+- `dazzle` described above
+- `proof` not sure if it's worth separating each proof with a specific datatype
+or if they can all be "proofs". If the wrong type of proof is passed, it can
+be treated as an invalid proof.
+- `note` a node that is to be placed in the dazzle
 
 ## Operations
 
