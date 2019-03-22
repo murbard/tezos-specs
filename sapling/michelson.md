@@ -7,9 +7,8 @@ This is a low granularity integration of Sapling in Michelson
 We introduce the datatype `dazzle`. Under the hood, a dazzle represents
 
 1. a nullifier set
-2. a dequeue of merkle trees (sharing nodes) (can simply be implemented as a map from indices
-to merkle trees)
-3. a map between root hashes and the corresponding merkle tree in the dequeue
+2. a merkle tree
+3. a dequeue of merkle root hashes 
 
 Dazzles are constructed using the opcode
 
